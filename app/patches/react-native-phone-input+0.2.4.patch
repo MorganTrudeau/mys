@@ -1,0 +1,108 @@
+diff --git a/node_modules/react-native-phone-input/lib/index.js b/node_modules/react-native-phone-input/lib/index.js
+index 75630fd..5b7ad9d 100644
+--- a/node_modules/react-native-phone-input/lib/index.js
++++ b/node_modules/react-native-phone-input/lib/index.js
+@@ -1,5 +1,11 @@
+ import React, { Component } from "react";
+-import { Image, TextInput, TouchableWithoutFeedback, View } from "react-native";
++import {
++  Image,
++  TextInput,
++  TouchableWithoutFeedback,
++  View,
++  Text
++} from "react-native";
+ import PropTypes from "prop-types";
+ 
+ import Country from "./country";
+@@ -7,6 +13,7 @@ import Flags from "./resources/flags";
+ import PhoneNumber from "./phoneNumber";
+ import styles from "./styles";
+ import CountryPicker from "./countryPicker";
++import { TextInputMask } from "react-native-masked-text";
+ 
+ export default class PhoneInput extends Component {
+   static setCustomCountriesData(json) {
+@@ -34,7 +41,7 @@ export default class PhoneInput extends Component {
+       disabled,
+       formattedNumber: countryData ? `+${countryData.dialCode}` : "",
+       value: null,
+-      inputValue: "",
++      inputValue: ""
+     };
+   }
+ 
+@@ -100,7 +107,7 @@ export default class PhoneInput extends Component {
+   }
+ 
+   getValue() {
+-    return this.state.formattedNumber.replace(/\s/g,'');
++    return this.state.formattedNumber.replace(/\s/g, "");
+   }
+ 
+   getNumberType() {
+@@ -124,7 +131,7 @@ export default class PhoneInput extends Component {
+             formattedNumber: `+${countryData.dialCode}`
+           },
+           () => {
+-            this.updateFlagAndFormatNumber(this.state.inputValue)
++            this.updateFlagAndFormatNumber(this.state.inputValue);
+             if (this.props.onSelectCountry) this.props.onSelectCountry(iso2);
+           }
+         );
+@@ -153,14 +160,22 @@ export default class PhoneInput extends Component {
+     if (number) {
+       const countryCode = this.getCountryCode();
+       if (formattedPhoneNumber[0] !== "+" && countryCode !== null) {
+-        formattedPhoneNumber = '+' + countryCode.toString() + formattedPhoneNumber.toString();
++        formattedPhoneNumber =
++          "+" + countryCode.toString() + formattedPhoneNumber.toString();
+       }
+       formattedPhoneNumber = allowZeroAfterCountryCode
+         ? formattedPhoneNumber
+         : this.possiblyEliminateZeroAfterCountryCode(formattedPhoneNumber);
+       iso2 = PhoneNumber.getCountryCodeOfNumber(formattedPhoneNumber);
+     }
+-    this.setState({ iso2, formattedNumber: formattedPhoneNumber, inputValue: number }, actionAfterSetState);
++    this.setState(
++      {
++        iso2,
++        formattedNumber: formattedPhoneNumber,
++        inputValue: this.format(number)
++      },
++      actionAfterSetState
++    );
+   }
+ 
+   possiblyEliminateZeroAfterCountryCode(number) {
+@@ -193,9 +208,17 @@ export default class PhoneInput extends Component {
+             onPress={this.onPressFlag}
+           />
+         </TouchableWithoutFeedback>
++        <Text
++          style={{
++            marginLeft: 10,
++            fontSize: this.props.textProps?.style?.fontSize
++          }}
++        >
++          +{this.getCountryCode()}
++        </Text>
+         <View style={{ flex: 1, marginLeft: this.props.offset || 10 }}>
+-          <TextComponent
+-            ref={ref => {
++          <TextInputMask
++            refInput={ref => {
+               this.inputPhone = ref;
+             }}
+             editable={!disabled}
+@@ -207,6 +230,10 @@ export default class PhoneInput extends Component {
+             keyboardType="phone-pad"
+             underlineColorAndroid="rgba(0,0,0,0)"
+             value={inputValue}
++            type={"cel-phone"}
++            options={{
++              dddMask: "(999) 999-"
++            }}
+             {...this.props.textProps}
+           />
+         </View>

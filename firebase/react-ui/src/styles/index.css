@@ -1,0 +1,154 @@
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+}
+
+p {
+  font-size: 12px;
+  line-height: 6px;
+}
+
+.textInput {
+  border-color: rgba(0, 0, 0, 0.2);
+  border-width: 1px;
+  border-radius: 5px;
+  display: block;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.button {
+  width: 100px;
+  border-radius: 5px;
+  background-color: #f8f8fb;
+  color: #050a19;
+  padding: 5px;
+  display: block;
+}
+
+.app {
+  background-color: #f8f8fb;
+}
+
+.splash {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(31, 28, 44); /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    rgba(31, 28, 44, 1) 0%,
+    rgba(146, 141, 171, 1) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(31, 28, 44, 1) 0%,
+    rgba(146, 141, 171, 1) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba(31, 28, 44, 1) 0%,
+    rgba(146, 141, 171, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#283a6e', endColorstr='#465b95',GradientType=0 ); /* IE6-9 */
+}
+
+.login {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  flex: 1;
+  background-color: #fff;
+  padding: 10px;
+  flex-direction: row;
+  align-items: center;
+  vertical-align: center;
+}
+
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav li {
+  float: left;
+}
+
+.nav li a {
+  display: block;
+  color: #a4aecb;
+  text-align: center;
+  padding: 0px 16px;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.nav li a:hover {
+  color: #ffffff;
+}
+
+.nav .active {
+  color: #ffffff;
+}
+
+.side-by-side {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+.side {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.date-night-item {
+  background-color: #fff;
+  padding: 10px;
+  border: solid #c4c4c4;
+  border-width: 0 0 1px 0;
+}
+
+.date-night-list {
+  border: 1px solid #c4c4c4;
+  background-color: #fff;
+  height: 100%;
+  flex: 1;
+}
+
+@media only screen and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  .side-by-side {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.footer {
+  background-color: #e9ebf0;
+  display: flex;
+  /*justify-content: center;*/
+  align-items: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}

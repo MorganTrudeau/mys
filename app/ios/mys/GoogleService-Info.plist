@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>752054190277-fm3rn42osnq4utju2p5msor6gufb7h5v.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.752054190277-fm3rn42osnq4utju2p5msor6gufb7h5v</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCIFiH8aa5x6Scb-1Gk0E4rn1xO3qO9KUE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>752054190277</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.magnify.mys</string>
+	<key>PROJECT_ID</key>
+	<string>move-your-shit</string>
+	<key>STORAGE_BUCKET</key>
+	<string>move-your-shit.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:752054190277:ios:ed8c8763927811db</string>
+	<key>DATABASE_URL</key>
+	<string>https://move-your-shit.firebaseio.com</string>
+</dict>
+</plist>

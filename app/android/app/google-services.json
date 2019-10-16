@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "752054190277",
+    "firebase_url": "https://move-your-shit.firebaseio.com",
+    "project_id": "move-your-shit",
+    "storage_bucket": "move-your-shit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:752054190277:android:ed8c8763927811db",
+        "android_client_info": {
+          "package_name": "com.magnify.mys"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "752054190277-j0nui84f70mjqn8gds5729iglfh0hm02.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEyd0Y9aOjH6PL1XNeST8oyN47XfSmw1E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "752054190277-j0nui84f70mjqn8gds5729iglfh0hm02.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "752054190277-fm3rn42osnq4utju2p5msor6gufb7h5v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.magnify.mys"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
