@@ -1,0 +1,9 @@
+.container {
+  height: 100px;
+  padding: 20px;
+}
+
+.logo-text {
+  letter-spacing: 1;
+  cursor: pointer;
+}

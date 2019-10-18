@@ -6,7 +6,7 @@ import { BeatLoader } from "react-spinners";
 class SplashScreen extends React.Component {
   render() {
     return (
-      <div className={"splash"}>
+      <div>
         <img src={logo} width={200} style={{ marginBottom: 20 }} />
         <BeatLoader color={"#fff"} />
       </div>

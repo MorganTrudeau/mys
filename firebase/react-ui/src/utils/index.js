@@ -1,7 +1,7 @@
 
 export function duplicate(items) {
   let duplicates = [];
-  items.map(item => {
+  items.forEach(item => {
     for (let i = 0; i < 20; i++) {
       duplicates.push(item);
     }

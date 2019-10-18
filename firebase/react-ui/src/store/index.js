@@ -5,11 +5,11 @@ import logger from "redux-logger"
 import createStorageMiddleware, {getStorageState} from 'redux-simple-storage-middleware';
 
 const sessionStorageMiddleware = createStorageMiddleware({
-    key: 'employeelinkstorage',
+    key: 'mysstorage',
 });
 
 const storageState = getStorageState({
-    key: 'employeelinkstorage',
+    key: 'mysstorage',
 });
 
 let store = createStore(

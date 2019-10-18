@@ -1,5 +1,10 @@
 body {
-	margin: 0;
-	padding: 0;
-	font-family: Verdana, Geneva, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+body *::selection {
+  color: white;
+  background-color: #eb4447;
 }

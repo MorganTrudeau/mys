@@ -5,8 +5,6 @@ import {
   logoutRequest
 } from "../actions/auth";
 import firebase from "../database";
-import "@firebase/database";
-import "@firebase/auth";
 import { loginErrorToMessage } from "../utils";
 
 

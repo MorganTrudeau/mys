@@ -4,7 +4,7 @@ import logo from "../assets/cherries.png";
 class Footer extends Component {
   render() {
     return (
-      <div className="footer">
+      <div>
         <img src={logo} height={30} style={{ margin: "0px 20px 0px 20px" }} />
         <h5
           style={{

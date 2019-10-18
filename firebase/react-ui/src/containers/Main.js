@@ -3,30 +3,24 @@ import { Switch, Route } from "react-router-dom";
 import { connect } from "react-redux";
 import HomeScreen from "./HomeScreen";
 import LoginScreen from "./LoginScreen";
-import SplashScreen from "./SplashScreen";
+import CompanyScreen from "./CompanyScreen";
 
 class Main extends Component {
   render() {
-    const { auth } = this.props;
-    if (
-      auth.firebaseAuth === "ACTIVE" &&
-      auth.user.id === "bMagkkLeGogb9YdrsLiBAmyYjio2"
-    ) {
-      return (
-        <Switch>
-          <Route exact path="/" component={HomeScreen} />
-        </Switch>
-      );
+    if (this.props.firebaseAuth === "ACTIVE") {
+      return <Route component={CompanyScreen} />;
     }
-    if (auth.firebaseAuth === "INACTIVE") {
-      return <Route exact path="/" component={LoginScreen} />;
-    }
-    return <Route exact path="/" component={SplashScreen} />;
+    return (
+      <Switch>
+        <Route exact path="/" component={HomeScreen} />
+        <Route path={"/login"} component={LoginScreen} />
+      </Switch>
+    );
   }
 }
 
 const mapStateToProps = state => {
-  return { auth: state.auth, company: state.company };
+  return { firebaseAuth: state.auth.firebaseAuth };
 };
 
 export default connect(
