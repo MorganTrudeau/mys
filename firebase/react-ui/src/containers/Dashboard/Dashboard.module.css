@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  height: 90vh;
+  justify-content: center;
+}
+
+.inner {
+  display: flex;
+  flex: 1;
+  padding: 30px;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+}

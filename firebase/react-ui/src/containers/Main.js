@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 import { connect } from "react-redux";
-import HomeScreen from "./HomeScreen";
-import LoginScreen from "./LoginScreen";
-import CompanyScreen from "./CompanyScreen";
+import HomeScreen from "../components/HomeScreen/HomeScreen";
+import LoginScreen from "./LoginScreen/LoginScreen";
+import Dashboard from "./Dashboard/Dashboard";
 
 class Main extends Component {
   render() {
     if (this.props.firebaseAuth === "ACTIVE") {
-      return <Route component={CompanyScreen} />;
+      return <Route component={Dashboard} />;
     }
     return (
       <Switch>

@@ -1,13 +1,15 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 import { withRouter } from "react-router-dom";
-import { deAuth } from "../../apis/auth";
 import { connect } from "react-redux";
 import { compose } from "recompose";
+import { getAuthManager } from "../../utils/AuthManager";
+
+const AuthManager = getAuthManager();
 
 function SignOutButton({ history, signOut }) {
   const onClick = () => {
-    signOut();
+    return AuthManager.signOut();
   };
   return (
     <Button
@@ -21,14 +23,4 @@ function SignOutButton({ history, signOut }) {
   );
 }
 
-const mapDispatch = dispatch => {
-  return { signOut: () => dispatch(deAuth()) };
-};
-
-export default compose(
-  connect(
-    null,
-    mapDispatch
-  ),
-  withRouter
-)(SignOutButton);
+export default withRouter(SignOutButton);

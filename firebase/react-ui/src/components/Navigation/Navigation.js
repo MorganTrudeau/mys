@@ -6,8 +6,8 @@ import SignOutButton from "../SIgnOutButton/SignOutButton";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { compose } from "recompose";
-import "./Navigation.css";
-import { deAuth } from "../../apis/auth";
+import styles from "./Navigation.module.css";
+import TopNav from "../TopNav/TopNav";
 
 class Navigation extends Component {
   onLogoCLick = () => {
@@ -15,24 +15,23 @@ class Navigation extends Component {
   };
 
   render() {
-    console.log(this.props.history);
     return (
       <Grid
         container
-        className={"container"}
+        className={styles.container}
         alignItems={"center"}
         justify={"space-between"}
       >
         <Typography
-          className={"logo-text"}
+          className={styles.logoText}
           variant={"h6"}
           onClick={this.onLogoCLick}
         >
-          TRANSPORTER
+          TRANSPORT IT
         </Typography>
         {this.props.history.location.pathname !== "/login" &&
           this.props.firebaseAuth === "INACTIVE" && <LoginButton />}
-        {this.props.firebaseAuth === "ACTIVE" && <SignOutButton />}
+        <TopNav />
       </Grid>
     );
   }

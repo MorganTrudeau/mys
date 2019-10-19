@@ -2,7 +2,6 @@ import store from "../store";
 import { firebaseAuthActive, firebaseAuthInactive } from "../actions/auth";
 import firebase from "firebase/app";
 import "firebase/auth";
-// import { storeActiveUserId } from "../apis/user";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCQto_NLMVgUTXzKWcp6f3xbCI9jLvrw3c",
@@ -21,12 +20,8 @@ firebase.auth().onAuthStateChanged(user => {
   if (user != null) {
     let activeUser = { id: user.uid };
     store.dispatch(firebaseAuthActive(activeUser));
-    // storeActiveUserId(user.uid);
-    console.log("User logged in: " + JSON.stringify(activeUser));
   } else {
     store.dispatch(firebaseAuthInactive());
-    // storeActiveUserId("");
-    console.log("User logged out");
   }
 });
 

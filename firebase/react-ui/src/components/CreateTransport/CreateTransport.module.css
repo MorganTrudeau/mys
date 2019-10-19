@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+}
+
+.header {
+  position: absolute;
+  right: 0;
+}
+
+.inner {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: center;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  max-width: 500px;
+}
+
+.inputLabel {
+  margin-bottom: 40px !important;
+}
+
+.transportDetailWrapper {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.nextButton {
+  margin-top: 40px !important;
+}

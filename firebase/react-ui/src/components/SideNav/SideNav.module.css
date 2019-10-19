@@ -1,0 +1,28 @@
+.sideNavPaper {
+  width: 250px;
+  margin-right: 30px;
+  height: 100%;
+}
+
+.sideNavInner {
+  padding: 30px;
+}
+
+.sideNavItem {
+  height: 80px;
+  border-bottom: solid 1px #e6e6e6 !important;
+}
+
+.sideNavItemLast {
+  height: 80px;
+}
+
+.sideNavItemLabel {
+  font-size: 1.5em !important;
+  font-weight: lighter !important;
+}
+
+.sideNavItemLabelSelected {
+  font-size: 1.5em !important;
+  font-weight: normal !important;
+}

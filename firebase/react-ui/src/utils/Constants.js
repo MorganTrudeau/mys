@@ -1,4 +1,4 @@
-const colors = {
+export const colors = {
   primary: "#eb4447",
   secondary: "#ef696b",
   bg: "#f8f8fb",
@@ -21,6 +21,22 @@ const colors = {
   icon: "#212121"
 };
 
+export const NavStates = {
+  transports: "transports",
+  drivers: "drivers",
+  billing: "billing",
+  settings: "settings"
+};
+
+export const TransportKeys = {
+  name: "name",
+  weight: "weight",
+  startLocation: "startLocation",
+  endLocation: "endLocation",
+  date: "date"
+};
+
 export default {
-  colors
+  colors,
+  NavStates
 };

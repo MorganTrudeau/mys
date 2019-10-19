@@ -1,0 +1,10 @@
+.container {
+  height: 10vh;
+  max-height: 100px;
+  padding: 20px 40px;
+}
+
+.logoText {
+  letter-spacing: 2px !important;
+  cursor: pointer;
+}

@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  height: 90vh;
+  padding: 30px;
+}
+
+.inner {
+  display: flex;
+  flex: 1;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.formWrapper {
+  height: 400px;
+  width: 100%;
+  max-width: 550px;
+}

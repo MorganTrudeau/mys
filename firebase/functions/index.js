@@ -14,6 +14,9 @@ app.use("/stripe", stripeRoute);
 const locationRoute = require("./routes/location");
 app.use("/location", locationRoute);
 
+const transportRoute = require("./routes/transport");
+app.use("/transport", transportRoute);
+
 app.get("/", (req, res) => {
   res.send("Hello");
 });

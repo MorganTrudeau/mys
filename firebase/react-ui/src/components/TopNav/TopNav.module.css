@@ -1,0 +1,32 @@
+.topNavGrid {
+  padding: 30px;
+  height: 100%;
+}
+
+.topNavPaper {
+  width: 300px;
+  height: 100%;
+}
+
+.topNavInner {
+  padding: 30px;
+}
+
+.topNavItem {
+  height: 80px;
+  border-bottom: solid 1px #e6e6e6 !important;
+}
+
+.topNavItemLast {
+  height: 80px;
+}
+
+.topNavItemLabel {
+  font-size: 1.5em !important;
+  font-weight: lighter !important;
+}
+
+.topNavItemLabelSelected {
+  font-size: 1.5em !important;
+  font-weight: normal !important;
+}

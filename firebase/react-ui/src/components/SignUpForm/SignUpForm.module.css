@@ -1,0 +1,23 @@
+.terms1 {
+  margin-top: 20px;
+}
+
+.terms2 {
+  margin-top: 10px;
+}
+
+.signUpButton {
+  margin-top: 30px !important;
+}
+
+.paper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.inputGroup {
+  width: 100%;
+}

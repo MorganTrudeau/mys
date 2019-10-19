@@ -1,3 +1,25 @@
+.globalCenterColumn {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.MuiFab-primary {
+  background-color: #eb4447 !important;
+}
+
+.MuiFab-root:hover {
+  background-color: #ed5659 !important;
+  color: white !important;
+}
+
+.MuiButton-contained:hover {
+  background-color: #ed5659 !important;
+  color: white !important;
+}
+
 .MuiButton-containedPrimary {
   background-color: #eb4447 !important;
 }

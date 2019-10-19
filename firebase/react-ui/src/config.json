@@ -1,0 +1,4 @@
+{
+  "serverUrl": "https://us-central1-move-your-shit.cloudfunctions.net/app",
+  "devServerUrl": "http://localhost:5001/move-your-shit/us-central1/app"
+}
